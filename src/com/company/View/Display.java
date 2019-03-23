@@ -37,6 +37,11 @@ public class Display extends JPanel implements ActionListener, MouseListener, Mo
             private Controller controller = new Controller();
 
             public Display(){
+                JOptionPane.showMessageDialog(null,
+                        "Приветствую тебя в игре СКОРАЯ ПОМОЩЬ!\n" +
+                                "Тебе надо доехать до больницы собирая всех пациентов, а потом вылечить их.\n" +
+                                "Ты можешь менять машины в гараже, следить за своей скоростью и прогрессом. Удачи!");
+                setFocusable(true);
                 mainTimer.start();
                 addKeyListener(new MyKeyAdapter());
                 addMouseMotionListener(this);
